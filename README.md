@@ -1,1 +1,1 @@
-A (sorta?) machine learning Tick-Tack-Toe AI
+I have an awesome readme
