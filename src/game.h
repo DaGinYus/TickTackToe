@@ -3,7 +3,7 @@
 
 class GamePiece {
  private:
-  int m_coord [2]; // stored in x,y array
+  int m_coord[2]; // stored in x,y array
   char m_type; // x or o
 
  public:
@@ -12,7 +12,7 @@ class GamePiece {
 
 class Game {
  private:
-  char board [3][3];
+  char board[3][3];
   std::vector<GamePiece> moveList; // remembers moves
 
  public:
