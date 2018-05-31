@@ -1,6 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <vector>
+
 class GamePiece {
  private:
   int m_coord[2]; // stored in x,y array
@@ -8,7 +10,7 @@ class GamePiece {
 
  public:
   GamePiece(int x, int y, char type);
-}
+};
 
 class Game {
  private:
@@ -18,6 +20,6 @@ class Game {
  public:
   Game(); // creates new board and starts game
   void refreshBoard(); // updates and draws to screen
-}
+};
 
 #endif // GAME_H

@@ -1,9 +1,9 @@
 #include <iostream>
-#include <vector>
 #include "game.h"
 
 GamePiece::GamePiece(int x, int y, char type) {
-  m_coord[2] = {x, y};
+  m_coord[0] = x;
+  m_coord[1] = y;
   m_type = type;
 }
 
@@ -21,6 +21,6 @@ void Game::refreshBoard() {
     for (int j=0; j<3; j++) {
       std::cout << '|' << board[i][j];
     }
-    std::cout << std::endl;
+    std::cout << '|' << std::endl;
   }
 }
