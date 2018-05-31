@@ -14,12 +14,16 @@ class GamePiece {
 
 class Game {
  private:
-  char board[3][3];
-  std::vector<GamePiece> moveList; // remembers moves
+  std::vector<GamePiece> move_history;
+  char m_board[3][3];
+  int m_player;
+  bool m_game_end;
 
  public:
-  Game(); // creates new board and starts game
-  void refreshBoard(); // updates and draws to screen
+  Game();
+  void startGame();
+  void startTurn();
+  void detectWin();
 };
 
 #endif // GAME_H

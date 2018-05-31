@@ -8,19 +8,27 @@ GamePiece::GamePiece(int x, int y, char type) {
 }
 
 Game::Game() {
-  // start with all blank spaces
+  m_game_end = false;
+}
+
+void Game::startGame() {
+  /* the main game function. it randomly decides who goes first
+     then also ends the game */
+  
+  // fills board with empty spaces
   for (int i=0; i<3; i++) {
     for (int j=0; j<3; j++) {
-      board[i][j] = ' ';
+      m_board[i][j] = ' ';
     }
   }
 }
 
-void Game::refreshBoard() {
-  for (int i=0; i<3; i++) {
-    for (int j=0; j<3; j++) {
-      std::cout << '|' << board[i][j];
-    }
-    std::cout << '|' << std::endl;
-  }
+void Game::startTurn() {
+  /* a recursive function that allows player to choose
+     then modifies the game board. once the player finishes
+     his turn, it calls itself for the next player */
+}
+
+void Game::detectWin() {
+  /* detects if a player has won. called inside startTurn() function */
 }
