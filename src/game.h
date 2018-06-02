@@ -15,9 +15,9 @@ class GamePiece {
 class Game {
  private:
   std::vector<GamePiece> move_history;
-  char m_board[3][3];
-  int m_player;
-  bool m_game_end;
+  char board_logic[3][3];
+  int player;
+  bool game_end;
 
  public:
   Game();
