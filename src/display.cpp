@@ -1,45 +1,5 @@
 #include "display.h"
 
-/* WINDOW * createBoard() {
-  initscr(); // initialize with one character at a time and echo suppression
-  cbreak();
-  noecho();
-  keypad(stdscr, TRUE); // allows arrow key usage
-
-  // start coordinates for screen
-  startln = 2;
-  startcol = 3;
-  height = 13;
-  width = 25;
-
-  
-  WINDOW * board = newwin(height, width, startln, startcol);
-  refresh();
-
-  box(board, 0, 0); // border
-
-  wchar_t ch = 0x2502;
-    
-  // draw the board
-  wmove(board, 1, 8);
-  wvline(board, ch, 11);
-  
-  wrefresh(board);
-  return board;
-}
-
-int * selectBox() {
-  return 0;
-}
-  
-
-void destroyBoard(WINDOW * board) {
-  wrefresh(board);
-  getch();
-  endwin();
-}
-*/
-
 Board::Board() {
   startln = 2;
   startcol = 3;
