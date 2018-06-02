@@ -2,7 +2,7 @@
 #include "display.h"
 
 int main(int argc, char *argv[]) {
-  WINDOW * board = createBoard();
-  destroyBoard(board);
-  return 0;
+  Board board;
+  board.create();
+  board.destroy();
 }
