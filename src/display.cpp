@@ -12,15 +12,28 @@ void Board::create() {
   initscr();
   cbreak();
   noecho();
+  keypad(stdscr, TRUE);
 
-  // draw 3x3 box (width of each box is 9 and height is 5)
+  // draw the board
+  WINDOW * temp_board = newwin(13, 25, startln, startcol);
+  refresh();
+  box(temp_board, 0, 0);
+  
+  for (int a = 1; a < 3; a++) {
+    mvwvline(temp_board, 1, a * 8, ACS_VLINE, 11);
+    mvwhline(temp_board, a * 4, 1, ACS_HLINE, 23);
+  }
+  mvwaddch(temp_board, 4, 16, ACS_HLINE);
+
+  wrefresh(temp_board);
+  delwin(temp_board);
+
+  // make 9 windows so assigning x or o is easier
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
       WINDOW * win = newwin(height, width, startln + (i * 4), startcol + (j * 8));
       refresh();
       board[i][j] = win;
-      box(board[i][j], 0, 0);
-      wrefresh(board[i][j]);
     }
   }
 }
