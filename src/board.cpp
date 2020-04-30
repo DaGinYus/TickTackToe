@@ -15,13 +15,13 @@ Board::Board()
 
 void Board::setCell(int row, int col, char state)
 {
-  if(isValidChar(state)
+  if((isValidChar(state) && isEmpty(row, col)) || state == '.')
   {
     if(row < 3 && row >= 0 && col < 3 && col >=0)ttt_board[row][col] = state;
   }
 }
 
-char Board::getCell()
+char Board::getCell(int row, int col)
 {
   return ttt_board[row][col];
 }
@@ -36,4 +36,16 @@ bool Board::isEmpty(int row, int col)
 {
   if(ttt_board[row][col] == '.') return true;
   return false;
+}
+
+void Board::display()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            std::cout << ttt_board[i][j];
+        }
+        std::cout << std::endl;
+    }
 }
