@@ -15,7 +15,10 @@ Board::Board()
 
 void Board::setCell(int row, int col, char state)
 {
-  if(row < 3 && row >= 0 && col < 3 && col >=0)ttt_board[row][col] = state;
+  if(isValidChar(state)
+  {
+    if(row < 3 && row >= 0 && col < 3 && col >=0)ttt_board[row][col] = state;
+  }
 }
 
 char Board::getCell()
@@ -26,5 +29,11 @@ char Board::getCell()
 bool Board::isValidChar(char input)
 {
   if(input == 'X' || input == 'O' || input == '.') return true;
+  return false;
+}
+
+bool Board::isEmpty(int row, int col)
+{
+  if(ttt_board[row][col] == '.') return true;
   return false;
 }
