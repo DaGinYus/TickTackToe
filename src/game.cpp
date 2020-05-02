@@ -14,7 +14,7 @@ void Player::move() {
   if (move.size() == 2) {
     if (isalpha(move[0]) && isdigit(move[1])) {
 	// code for updating board goes here
-      break;
+      std::cout << "valid move" << std::endl; // this is just a placeholder right now
     }
   }
   else {
