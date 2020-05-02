@@ -7,7 +7,7 @@ class Game {
   bool game_over = false;
 public:
   void run();
-  void detect_win();
+  void check_win();
 }
 
 class Player {
