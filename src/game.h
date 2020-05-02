@@ -1,10 +1,20 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "board.h"
+
+class Game {
+  bool game_over = false;
+public:
+  void run();
+  void detect_win();
+}
+
 class Player {
   char player_token;
- public:
-  void move();
+public:
+  Player(char);
+  void move(Game, Board);
 };
 
 #endif // GAME_H
