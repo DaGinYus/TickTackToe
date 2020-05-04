@@ -6,7 +6,7 @@ class Board
 public:
     Board();
 
-    void setCell(int row, int col, char state);
+    bool setCell(int row, int col, char state);
 
     char getCell(int row, int col);
 
