@@ -12,14 +12,11 @@ public:
 
     bool isValidChar(char input);
 
-    bool isEmpty(int row, int col);
-
     void display();
 
 
 private:
     char ttt_board[3][3];
-
 };
 
 #endif /* Board_h */
