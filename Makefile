@@ -1,6 +1,7 @@
 CXX = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -std=c++11 -Wall -g
 
+VPATH = src/
 OBJECTS = main.o game.o board.o
 
 tickytacky : $(OBJECTS)
