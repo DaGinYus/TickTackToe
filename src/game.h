@@ -3,18 +3,21 @@
 
 #include "board.h"
 
-class Game {
-  bool game_over = false;
-public:
-  void run();
-  void check_win();
-}
-
 class Player {
   char player_token;
 public:
   Player(char);
-  void move(Game, Board);
+  void move(Board &board);
+  char get_token();
+};
+
+class Game {
+  bool game_over;
+  int winner; // 1 or 2
+public:
+  Game();
+  void run();
+  int check_win(Board &board, Player player1, Player player2);
 };
 
 #endif // GAME_H
